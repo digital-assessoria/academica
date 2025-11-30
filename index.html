@@ -86,16 +86,22 @@
     }
 
     .logo-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 30%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       background: radial-gradient(circle at 20% 20%, #ffffff, #4a3aff);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ffffff;
-      font-size: 0.95rem;
       box-shadow: 0 10px 25px rgba(76, 81, 191, 0.4);
+      padding: 6px;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .logo span {
@@ -230,7 +236,7 @@
     .hero-title {
       font-size: clamp(2rem, 2.7vw, 2.6rem);
       line-height: 1.15;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
       letter-spacing: -0.03em;
     }
 
@@ -238,6 +244,13 @@
       background: linear-gradient(90deg, #4a3aff, #11b58a);
       -webkit-background-clip: text;
       color: transparent;
+    }
+
+    .hero-microheadline {
+      font-size: 1rem;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 0.9rem;
     }
 
     .hero-subtitle {
@@ -288,6 +301,41 @@
     .hero-contact span {
       display: inline-block;
       margin-right: 1rem;
+    }
+
+    .hero-offer {
+      margin-top: 1.4rem;
+      padding: 0.9rem 1rem;
+      border-radius: 18px;
+      border: 1px solid rgba(74, 58, 255, 0.18);
+      background: linear-gradient(120deg, rgba(74, 58, 255, 0.06), rgba(17, 181, 138, 0.05));
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+    }
+
+    .hero-offer-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--primary-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-offer-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-offer-text {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-offer-badge {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 500;
     }
 
     .hero-card {
@@ -415,6 +463,13 @@
       font-size: 0.9rem;
       color: var(--muted);
       max-width: 34rem;
+    }
+
+    .section-highlight {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-top: 0.4rem;
+      font-weight: 500;
     }
 
     /* Two columns */
@@ -797,7 +852,10 @@
     <header>
       <div class="container nav">
         <div class="logo">
-          <div class="logo-mark">DA</div>
+          <div class="logo-mark">
+            <!-- Substitua o caminho abaixo pelo arquivo real da sua logo -->
+            <img src="logo-digital-academica.png" alt="Logo Digital Acadêmica" class="logo-img" />
+          </div>
           <span>Digital <strong>Acadêmica</strong></span>
         </div>
         <nav class="nav-links">
@@ -814,7 +872,7 @@
           </div>
           <a
             class="btn btn-outline"
-            href="https://wa.me/5592993436365?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Digital%20Acad%C3%AAmica%20e%20gostaria%20de%20informações%20sobre%20orienta%C3%A7%C3%A3o%20acad%C3%AAmica."
+            href="https://wa.me/5592993436365?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Digital%20Acad%C3%AAmica%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20orienta%C3%A7%C3%A3o%20acad%C3%AAmica."
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -831,23 +889,26 @@
           <div>
             <div class="badge">
               <span class="badge-dot"></span>
-              Agenda de mentorias com vagas limitadas
+              Oferta ativa: vagas limitadas para novos alunos este mês
             </div>
             <h1 class="hero-title">
-              Transforme seu
+              Termine seu
               <span class="highlight">TCC, artigo ou monografia</span>
-              em um trabalho claro, organizado e dentro das normas
+              com clareza, segurança e sem adiar mais um semestre
             </h1>
+            <p class="hero-microheadline">
+              Da página em branco à defesa: orientação passo a passo para você concluir o trabalho de vez.
+            </p>
             <p class="hero-subtitle">
-              A <strong>Digital Acadêmica</strong> é uma consultoria de orientação acadêmica
-              especializada em estudantes de nível superior que desejam escrever com segurança,
-              organizar ideias e cumprir prazos, mantendo a ética e a originalidade dos seus trabalhos.
+              A <strong>Digital Acadêmica</strong> é uma consultoria de orientação acadêmica especializada em estudantes
+              de nível superior que querem organizar ideias, cumprir prazos e apresentar um trabalho forte – sem abrir mão
+              da ética e da originalidade.
             </p>
             <div class="hero-bullets">
               <span class="pill">Foco em TCC, monografias, artigos e projetos</span>
               <span class="pill">Orientação 100% online e personalizada</span>
               <span class="pill">Especialistas em normas ABNT</span>
-              <span class="pill">Não vendemos trabalhos prontos</span>
+              <span class="pill">Acompanhamento individual, sem soluções prontas</span>
             </div>
             <div class="hero-cta">
               <a href="#contato" class="btn btn-primary">
@@ -863,8 +924,20 @@
               </a>
             </div>
             <p class="hero-note">
-              <strong>Vagas limitadas</strong> para garantir acompanhamento individual de cada aluno.
+              <strong>Prioridade para novos alunos este mês</strong>: número reduzido de vagas para garantir acompanhamento
+              realmente próximo.
             </p>
+            <div class="hero-offer">
+              <div class="hero-offer-tag">Oferta irresistível</div>
+              <div class="hero-offer-title">Sessão de diagnóstico acadêmico + mini roteiro de escrita</div>
+              <p class="hero-offer-text">
+                Preencha o formulário hoje e receba uma sessão de diagnóstico individual para entender seu caso
+                e sair com um mini plano de ação para organizar seu TCC ou artigo.
+              </p>
+              <p class="hero-offer-badge">
+                Vagas limitadas por semana para manter o acompanhamento 1:1.
+              </p>
+            </div>
             <div class="hero-contact">
               <span>📞 WhatsApp: <strong>+55 (92) 99343-6365</strong></span>
               <span>📧 E-mail: <strong>digitalassessoriaacademica@gmail.com</strong></span>
@@ -913,6 +986,9 @@
             <p class="section-subtitle">
               Se você sente que está sozinho com seu TCC, projeto ou artigo, sem clareza e sem tempo,
               aqui é o lugar certo para organizar ideias, prazos e etapas.
+            </p>
+            <p class="section-highlight">
+              Se você se reconhecer em dois ou mais itens abaixo, esta consultoria é para você.
             </p>
           </div>
 
@@ -972,7 +1048,7 @@
         <div class="container">
           <div class="section-header">
             <div class="section-kicker">o que fazemos</div>
-            <h2 class="section-title">Orientação completa, sem ferir a ética acadêmica</h2>
+            <h2 class="section-title">Do tema à banca: você não precisa caminhar sozinho</h2>
             <p class="section-subtitle">
               A Digital Acadêmica não vende trabalhos prontos. Nós orientamos, revisamos e organizamos com você,
               para que o trabalho seja de fato seu – e você possa defendê-lo com segurança.
@@ -1097,8 +1173,8 @@
             <div class="section-kicker">formatos de atendimento</div>
             <h2 class="section-title">Escolha o nível de acompanhamento ideal para você</h2>
             <p class="section-subtitle">
-              Todos os atendimentos são online, com foco em orientação individual. Adapte os planos à sua realidade
-              de prazo e de curso.
+              Comece pelo plano que faz mais sentido hoje – você pode ajustar o formato conforme a evolução do seu
+              trabalho.
             </p>
           </div>
 
